@@ -1,5 +1,6 @@
 ## monkey中文文档
-
+1. 英文文档地址 http://tampermonkey.net/documentation.php
+2. 直接使用有道翻译, 就可以直接得到翻译的大概内容. 不需要找文档... 2018-4-4_19:49:53
 > @name
 
 脚本的名称
