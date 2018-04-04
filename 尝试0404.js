@@ -8,10 +8,6 @@
 // @grant        none   用于添加GM_ 函数到白名单
 // ==/UserScript==
 
-(function() {
-    'use strict';
-
-    // Your code here...
-})();
+alert('hello,world')   // 编写错误了, 该先看看API接口的内容.先尝试调用接口
 
 // 解释内容的含义2018-4-4_19:36:27
