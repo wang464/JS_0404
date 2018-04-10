@@ -9,4 +9,4 @@ function greet(name){
     console.log(s + ',' + name + '!');
 }
 
-module.exports = greet;
+module.exports = greet;  // JS调用模块内容
