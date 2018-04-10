@@ -3,12 +3,22 @@
 
 // greet(s) // JS调用模块内容
 'use strict';
+// let fs = require('fs');
+
+// fs.readFile('try.txt ','utf-8',function(err, data){
+//     if(err){
+//         console.log(err);
+//     }else{
+//         console.log(data);
+//     }
+// });   //  node使用fs模块读取文件
 let fs = require('fs');
 
-fs.readFile('try.txt ','utf-8',function(err, data){
+let data = 'hello, Node.js';
+fs.writeFile('output.txt', data, function (err) {
     if(err){
         console.log(err);
     }else{
-        console.log(data);
+        console.log('ok');
     }
-});   //  node使用fs模块读取文件
+});  // node使用fs模块写入文件
