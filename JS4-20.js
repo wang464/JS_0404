@@ -29,3 +29,7 @@ http.get(url, function(sres) {
       console.log(titles);     
     });
   });
+
+  //  爬虫参考1 https://segmentfault.com/a/1190000008745531
+  //  爬虫参考2 https://blog.csdn.net/u012187452/article/details/73478028
+  //  模块API参考  https://cnodejs.org/topic/5203a71844e76d216a727d2e
