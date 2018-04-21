@@ -1,5 +1,3 @@
-import { log } from "util";
-
 'use strict';
 // function print(s) {
 //     console.log(s);
@@ -23,12 +21,4 @@ import { log } from "util";
 
 // test(myFunc); // 调用函数,显示打印结果
 
-function f(a,b) {
-    return a;
-}
-
-
-
-
-
-
+console.log(123);
