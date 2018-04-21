@@ -58,3 +58,10 @@
 //   console.log(inc()); // 6
 //   console.log(inc()); // 7
   
+// (function(){ console.log('你好'); })(); // 匿名函数的两种写法之一
+// (function () {
+//     var a = '你大爷';
+//     console.log(a);
+// }());   // 匿名函数的两种写法之二
+
+
