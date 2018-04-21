@@ -21,10 +21,5 @@
 
 // test(myFunc); // 调用函数,显示打印结果
 
-// var f = function(one) {
-//     console.log(arguments[0]);
-//     console.log(arguments[1]);
-//     console.log(arguments[2]);    
-// }
+console.log(1222, '你好');
 
-// f(1, 2, 3)
