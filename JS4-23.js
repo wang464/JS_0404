@@ -70,8 +70,19 @@
 // };
 // console.log(Person3);
 
+
 // 模板字符串
-var x = 1 ;
-var y = 2 ;
-console.log(`${x}+${y}=${x+y}`);
-console.log(`使用${x}这样可以吗?`)
+// var x = 1 ;
+// var y = 2 ;
+// console.log(`${x}+${y}=${x+y}`);
+// console.log(`使用${x}这样可以吗?`)
+
+
+// for...of循环
+var arr = ['a', 'b' , 'c', 'e'];
+for (let a of arr ){
+    console.log(a);
+}
+for (let a in arr ){
+    console.log(a);
+}
