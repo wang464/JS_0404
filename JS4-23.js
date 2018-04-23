@@ -69,3 +69,9 @@
 //     hello(){console.log('我的名字是',this.name);}
 // };
 // console.log(Person3);
+
+// 模板字符串
+var x = 1 ;
+var y = 2 ;
+console.log(`${x}+${y}=${x+y}`);
+console.log(`使用${x}这样可以吗?`)
