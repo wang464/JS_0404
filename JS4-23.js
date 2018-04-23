@@ -56,3 +56,10 @@
 //   console.log(person2.name);
 //   console.log(person2.greeting());
   
+
+// 娱乐
+
+var number = 11 * 7;
+var color = 'bule';
+
+console.log('%d 你的 %s  你好', number, color);
