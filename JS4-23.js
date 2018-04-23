@@ -57,9 +57,15 @@
 //   console.log(person2.greeting());
   
 
-// 娱乐
+// // 娱乐
+// var number = 11 * 7;
+// var color = 'bule';
+// console.log('%d 你的 %s  你好', number, color);
 
-var number = 11 * 7;
-var color = 'bule';
 
-console.log('%d 你的 %s  你好', number, color);
+// es6语法
+// var Person3 = {
+//     name: '张三',
+//     hello(){console.log('我的名字是',this.name);}
+// };
+// console.log(Person3);
