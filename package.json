@@ -1,0 +1,27 @@
+{
+  "name": "JS_0404",
+  "version": "1.0.0",
+  "description": "尝试写一个JS脚本",
+  "main": "360防复制.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "iconv-lite": "^0.4.21",
+    "typescript": "^2.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "you": "./node_modules/typescript/lib/tsc.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wang464/JS_0404.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wang464/JS_0404/issues"
+  },
+  "homepage": "https://github.com/wang464/JS_0404#readme"
+}
