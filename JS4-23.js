@@ -79,10 +79,10 @@
 
 
 // for...of循环
-var arr = ['a', 'b' , 'c', 'e'];
-for (let a of arr ){
-    console.log(a);
-}
-for (let a in arr ){
-    console.log(a);
-}
+// var arr = ['a', 'b' , 'c', 'e'];
+// for (let a of arr ){
+//     console.log(a);
+// }
+// for (let a in arr ){
+//     console.log(a);
+// }
