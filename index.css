@@ -1,0 +1,70 @@
+h3 {
+    color: blue;
+}
+div.img {
+    display: block;
+    /* height: 200px;
+    width: 200px; */
+    background-color: brown;
+    background-image: url(/img/\ 062as9.gif);
+    background-repeat: repeat-x;
+    background-position: 50% 50%;
+    background-attachment:fixed;
+    /* padding: 10px 100px 10px 600px; */
+    border-style: solid dotted dashed double;
+    /* margin:0px 0px 100px 5px; */
+    
+}
+.a1{
+    background-color: red;
+    width: 500px;
+    height: 100px;
+    padding: 40px 30px;
+    margin-right: 1000px;
+}
+.a2{
+    background-color: aqua;
+    /* border-style: solid dotted dashed double; */
+    width: 500px;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 500px;
+}
+.a3{
+    background-color: blue;
+    width: 500px;
+    height: 100px;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+p.yan {
+    /* text-decoration: line-through; */
+    text-decoration:blue;
+    /* color: brown; */
+}
+p{
+    color: bule;    
+}
+a.link:link{
+    color:red;    
+}
+a.vis:visited{
+    color: #bbb;
+}
+a.hover:hover{
+    color: red;
+}
+a.active:active{
+    color: aqua;
+}
