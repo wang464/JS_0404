@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex全屏我的实现</title>
+    <style>
+    html,body,nav{
+        height: 100%;
+        overflow: hidden;
+        font-size: 30px;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        border-style: double;
+    }
+    header{
+        background: #183346;
+    }
+    section{
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        flex: 1;
+    }
+    aside{
+        background: #99abb9;
+    }
+    article {
+        background: #e3b498;
+        min-height: 1000px;
+        flex: 1;
+        overflow: auto;
+    }    
+    footer{
+        background: #e8c77a;
+    }
+    </style>
+</head>
+<body>
+    <nav>         
+        <header>标题</header>
+        <section>
+            <aside>
+                aside
+            </aside>
+            <article>
+                right
+            </article>
+            
+        </section>
+        <footer>
+            页脚
+        </footer>    
+    </nav>
+</body>
+</html>
