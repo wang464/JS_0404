@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex网页2</title>
+    <style>
+    /* 全屏显示所有内容 */
+    html,body,nav{
+        height: 100%;
+        overflow: hidden;
+        font-size: 40px;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;        
+    }
+    header{
+        background: #bbb;      
+    }
+    section{
+        display: flex;
+        flex: 1;
+    }
+    aside{
+        background: #b2b;
+        width: 90px;
+        /* 也就是说可以在flex布局里面保留原来的内容. */
+    }
+    article{
+        display: flex;
+        flex: 1;
+        background: #aba;
+        min-height: 1000px;
+        overflow: hidden;   
+    }
+    footer{
+        background: #b9b;
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <header>top</header>
+        <section>
+            <aside>life</aside>
+            <article>right</article>
+        </section>
+        <footer>
+            button
+        </footer>
+    </nav>
+</body>
+</html>
