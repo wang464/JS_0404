@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <param name="allowFullScreen" value="true">
     <title>豆瓣FM</title>
     <style>
-    html body nav {
-        height: 100%;
-        overflow: hidden;
+    html,body,nav {
+        height: 100%; overflow: hidden;
     }
+    
     nav {
         display: flex;
+        position: relative;
         flex-direction: column;
         border-style: double;
         margin: 0;
@@ -21,17 +23,19 @@
         border-style: dashed;
         align-items: flex-start;
         height: 90px;
+        margin: auto;
     }
     section {
         flex-grow: 1;
         border-style: dashed;
-        align-items: center;
+        margin: auto;
     }
     footer {
         height: 200px;
         align-self: flex-end;
         justify-content: flex-start;
         border-style: dotted;
+        margin: auto;
     }
     </style>
 </head>
