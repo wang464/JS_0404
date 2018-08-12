@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex布局1</title>
+    <style>
+        .box {
+            display: flex;
+            /* flex-direction: row-reverse; */
+            /* flex-wrap: wrap; */
+            /* flex-flow: row wrap; */
+            align-items: flex-start;
+        }
+        .two {
+            flex: 1;
+            border: 1px solid #bbb;
+            align-items: flex-start;
+        }
+        .one {
+            flex: 1;
+            border: 1px solid #bbb;            
+        }
+        .three {
+            flex: 1 ; 
+            border: 1px solid #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!-- <div class="one">one</div>
+        <div class="two">two</div>
+        <div class="three">three
+            <br>ha
+            <br>dfs
+            <br>text
+        </div> -->
+        <div>one</div>
+        <div>two</div>
+        <div>three
+            <br>ha
+            <br>dfs
+            <br>text
+        </div>
+    </div>    
+</body>
+</html>
