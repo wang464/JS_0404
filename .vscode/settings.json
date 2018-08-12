@@ -5,4 +5,6 @@
 "editor.snippetSuggestions": "top",
 // 若为 "true"，Emmet 建议将显示为代码片段。你可以在 editor.snippetSuggestions 设置中排列顺序。
 "emmet.showSuggestionsAsSnippets": true,
+"editor.wordWrap": "on" ,
+//设置自动换行
 }
