@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>重复之前的内容</title>
+    <style>
+    html,body,section {
+        height: 100%;
+        overflow: hidden;
+        font-size: 40px;
+    }
+    section {
+        display: flex;
+        flex-direction: column;        
+    }
+    nav {
+        background: red;        
+    }
+    header{
+        display: flex;        
+        flex: 1;
+    }
+    article {
+        display: flex;
+        background: blue;        
+        min-height: 1000px;
+        flex: 1;
+        overflow: hidden;
+    }
+    footer {
+        background: yellow;
+        height: 200px;
+    }
+    </style>
+</head>
+<body>
+    <section>
+        <nav>
+            top
+        </nav>
+        <header>
+            <aside>
+                right
+            </aside>
+            <article>
+                left
+            </article>
+        </header>
+        <footer>
+            button
+        </footer>
+
+    </section>
+    
+</body>
+</html>
