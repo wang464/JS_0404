@@ -3,10 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="refresh" content="1"> -->
     <title>图片内容整理</title>
 </head>
 <body>
+    <p>这是一个来自文件夹的图像</p>
+    <img src="../JS4/try.jpg" alt="动物图片" width="250" >
+    <p>这是一个来自资源链接的图像</p>
+    <img src="http://www.runoob.com/images/logo.png" alt="">
+
+    <p>这是一个动态图像. 本地没有资源. 方法和静态图像的一样, 暂时可省略</p>
+    <p>设置图片右浮动</p>
+    <img src="../JS4/try.jpg" alt="动物图片" width="250" style="float: right;" >
+    <p>图片链接</p>
+    <a href="http://www.baidu.com"> <img src="../JS4/try.jpg" alt="动物图片" width="250" ></a>
+
+    <p>这是多个图像拼在一起的拼图</p>
+    <map name="try">
+        <area shape="rect" coords="0,0,100,100" href="./0812.html" alt="跳转到0812">
+        <area shape="rect" coords="0,100,100,200" href="./0814_2.html" alt="跳转到0814_2">
+    </map>
+    <img src="../JS4/18a01.jpg" alt="图片" usemap="#try" width="350" > 
+
+    <p>网页</p>
+    <map name="primary">
+            <area shape="circle" coords="75,75,75" href="./0813_5.html">
+            <area shape="circle" coords="275,75,75" href="../index.html">
+          </map>
+          <img usemap="#primary" src="https://placehold.it/350x150" alt="350 x 150 pic">
+        
     
 </body>
 </html>
