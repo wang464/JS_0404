@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户名检测</title>
+</head>
+<body>
+    <p>检测是否是数字, 如果不是数字的话, 会弹窗</p>
+    <input type="text" id="demo">
+    <button type="button" onclick="myButton()">
+        点击验证
+    </button>
+    <script>
+    function myButton() {
+        var x = document.getElementById('demo').value;
+        if(x==''||isNaN(x))
+        {
+            alert('不是数字');
+        }
+    }
+    
+    </script>
+    <p id="deo">更换字段内容</p>
+    <script>
+    function myB1() {
+        document.getElementById('deo').innerHTML='这是新的字段';
+    }    
+    </script>
+    <button type="button" onclick="myB1()">点击更换</button>
+</body>
+</html>
