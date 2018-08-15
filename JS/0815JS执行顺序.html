@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS语句</title>
+</head>
+<body>
+    <h2>web页面</h2>
+    <p id="try1">一个段落</p>
+    <p id="try2">两个段落</p>
+    <script>
+    document.getElementById('try1').innerHTML='你好啊';
+    document.getElementById('try2').innerHTML='我很好';
+    function bu() {
+        document.getElementById('try3').innerHTML='我是谁?';
+        document.getElementById('try4').innerHTML='我在哪儿?'
+    }
+    var x=5;
+    var y=6;
+    var z= x + y;
+    document.write(x + "<br>");
+    document.write(y + '<br>');
+    document.write(z + '<br>');
+    </script>
+    <p id="try3">点击才能更换</p>
+    <p id="try4">点击更换</p>
+    <button type="button" onclick="bu()">点击才换</button>
+</body>
+</html>
