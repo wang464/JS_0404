@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第一个JS例子</title>
+</head>
+<body>
+    <h1>菜鸟上的第一个JS程序</h1>
+    <p id="demo">这是一个段落</p>
+    <button type="button" onclick='displayDate()'>显示日期</button>
+    <script>
+    function displayDate() {
+        document.getElementById('demo').innerHTML=Date();
+    }
+    </script>
+
+    <p>使用JS直接插入时间.</p>
+    <script>
+    document.write(Date());
+    </script>
+
+    <p>使用JS修改文本内容</p>
+    <p id="item">这是一个段落</p>
+    <script>
+    document.getElementById('item').innerHTML='段落由JS生成';
+    </script>
+    
+</body>
+</html>
