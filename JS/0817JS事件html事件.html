@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html中的事件</title>
+</head>
+<body>
+    <p>html事件.就是发生在html上面的事情,例如
+        <ul>
+            <li>html加载完成</li>
+            <li>鼠标点击某个元素</li>
+            <li>鼠标移动到某个元素上面</li>
+        </ul>
+    </p>
+    <p>点击触发时间</p>
+    <button onclick="getElementById('demo').innerHTML = Date()">现在时间是多少?</button>
+    <p id="demo"></p>
+    <p>使用this调用自身包含的事件</p>
+    <button onclick="this.innerHTML = Date()">现在的时间是?</button>
+    <button onclick="this.innerHTML = '我在哪儿'">我是谁?</button>
+    <a href="http://www.runoob.com/jsref/dom-obj-event.html">htmldom事件参考手册</a>
+</body>
+</html>
