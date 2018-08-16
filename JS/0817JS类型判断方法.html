@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>typeof类型判断方法</title>
+</head>
+<body>
+    <h4>typeof判断对象类型</h4>
+    <!-- <BUtton onclick="this.innerHTML= '(typeof ("jon"))'">jon</BUtton><br> 这个是我写错了.我以为JS里面没法识别函数是否是函数, 事实证明JS可以识别-->
+    <BUtton onclick='this.innerHTML= typeof 123'>123</BUtton><br>
+    <BUtton onclick='this.innerHTML= typeof "nihc"'>你好</BUtton><br>
+    <BUtton onclick='this.innerHTML= typeof false'>false</BUtton><br>
+    <BUtton onclick='this.innerHTML= typeof [1,2,3,4]'>[1,2,3,4]</BUtton><br>
+    <BUtton onclick='this.innerHTML= typeof {name:"nihc",age:20}'>{name:"nihc",age:20}</BUtton><br>
+
+    <!-- <button onclick="alert('你好')"></button> -->
+    <p>对象里面的内容(方法或者属性)都可以通过null来清空</p>
+    <p id="demo"></p>
+    <script>
+    var son = {firstName:'nihao',lastName:'deng',age:50};
+    var son = null;
+    document.getElementById('demo').innerHTML=typeof son;
+    </script>
+    <p id="dem"></p>
+    <script>
+    var son = {firstName:'nihao',lastName:'deng',age:50};
+    var son = 123;
+    document.getElementById('dem').innerHTML=typeof son;
+    </script>
+    <p>例子并不能证明null就可以清空函数的值.因为变量声明会覆盖值. 我使用了123之后,也生成了新的数值123. 只能证明.null是一个空对象, 在需要空的值的时候, 可以使用null就行生成一个空对象</p>
+    <br>
+    <p id="de"></p>
+    <script>
+    var son = 123
+    var son = null;
+    document.getElementById('de').innerHTML=typeof son;
+    </script>
+    <p>也可以使用undefined来把对象毁掉.无法使用.null的对象依旧是对象. 而undefined不是对象.也不是任何类型,无法使用函数或者任何方法.任何使用undefined的语句都会报错(可能有不会的.我住不知道, 但我已知的都会报错)</p>
+    <p id="d"></p>
+    <script>
+    var son = {firstName:'nihao',lastName:'deng',age:50};
+    var son = undefined;
+    document.getElementById('d').innerHTML=typeof son;
+    </script>
+    <p>比较坑的地方. null的值是相等的, 但类型不一样</p>
+    <script>    
+    console.log(
+        null === undefined,   //全等
+        null == undefined,  //值相等
+        typeof undefined,
+        typeof null
+    )
+    </script>
+    
+</body>
+</html>
