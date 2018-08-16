@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>作用域的例子</title>
+</head>
+<body>
+    <!-- 我对于作用域的理解需要加深,我知道的作用域是局部作用域?我要做什么?简单的写出例子, 如果要加深理解再进行关键词搜索 -->
+    <p>局部变量只在局部的作用域里面有效</p>
+    <p id="item"></p>
+    <p id="ite"></p>
+    <script>
+    
+    myFunction();  
+    // 调用或者不调用这个函数, 在全局变量里面依旧没有carName 
+    document.getElementById('item').innerHTML = 'carName的类型是 : ' + typeof carName;
+    // 如果是查看mefunction的carname是可以看到的.
+    document.getElementById('ite').innerHTML = 'myfunction里面的carname的类型是 : ' + typeof myFunction.carName;
+
+
+    alert(typeof null);
+
+    function myFunction() {
+        var carName = 'volvo';
+    }
+    </script>
+
+    <p>局部变量在声明的函数外不可以访问。</p>
+    <p id="demo"></p>
+    <script>
+    myFunction();
+    document.getElementById("demo").innerHTML = "carName 的类型是：" +  typeof carName;
+    function myFunction() 
+    {
+        var carName = "Volvo";
+    }
+    </script>
+</body>
+</html> 
