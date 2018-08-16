@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS对象</title>
+</head>
+<body>
+    <p>对象分为属性和方法.然而属性和方法是一个名词上面的概念.具体的那些是属性,哪些是方法是通过是否具有动态来进行判断的.</p>
+    <p>说的不够具体,我先写再想. 对象是一个属性集合. 因为内容都是静态的.</p>
+    <p id="demo">这是一个对象, 看代码</p>
+    <script>
+        var person = {
+            firstName:'john',
+            lastName:'Doe',
+            age:'45',
+            eyeColor:'blue'
+        };
+        document.getElementById('demo').innerHTML=person.firstName+'现在'+person.age+"岁了.";
+        
+    </script>
+    <h2>对象的方法</h2>
+    <p id="item"></p>
+    <p id="ite"></p>
+    <script>
+    var son = {
+        firstName:'john',
+        lastName:'Doe',
+        age:'45',
+        eyeColor:'blue',
+        fullName:function(){
+            return this.firstName+' '+this.lastName;
+        }
+    };
+    // this表示这个.其实这个函数的功能就是把firstname的值和lastname的值拼接在一起.
+    document.getElementById('item').innerHTML=son.fullName();
+    // 最后的结尾加上()  就是执行函数. 如果不加() 就是按照属性的方式显示. 
+    document.getElementById('ite').innerHTML=son.fullName;
+
+    </script>
+</body>
+</html>
