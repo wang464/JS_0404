@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQueryui基础使用1</title>
+    <script src="jquery_1.10.2_jquery.min.js"></script>
+</head>
+<body>
+    <p>点下都会消失</p>
+    <p>消失</p>
+    <p>消失2</p>
+    <p>消失3</p>
+    <p>消失4</p>
+<script>
+$(document).ready(function () {
+    $('p').click(function () {
+        $(this).hide();
+    })
+})
+</script>
+    
+</body>
+</html>
