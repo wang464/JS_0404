@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS错误调试</title>
+</head>
+
+<body>
+    <input type="button" value="查看消息" onclick="message()">
+    <script>
+        // var tat = '' ;
+        function message() {
+            try {
+                adddlert('这是一个错误');
+            }
+            catch (err) {
+                txt = '报错了.\n\n';
+                txt += '错误描述 : ' + err.message + '\n\n';
+                txt += '点击确定继续.';
+                alert(txt);
+            }
+        }    
+    </script>
+    <p>请输入一个10以内的数字</p>
+    <input type="text" id="de">
+    <button onclick="mynumber()">点击测试</button>
+    <p id="message">测试结果</p>
+    <SCript>
+        function mynumber() {
+            var message, x;
+            message = document.getElementById('message');
+            message.innerHTML = '';
+            x = document.getElementById('de').value;
+            try {
+                if (x == '') throw '值为空';
+                if (isNaN(x)) throw '非数字';
+                x = Number(x);
+                if (x > 5) throw '大于5';
+                if (x < 10) throw '小于10';
+            }
+            catch (err) {
+                message.innerHTML = '错误' + err;
+            }
+        }    
+    </SCript>
+    <p>怎么写都会报错</p>
+    <input type="text" id="zhi">
+    <button onclick="mytry()">点击测试</button>
+    <p id="zifu">显示错误</p>
+    <script>
+        function mytry() {
+            var zhi, zifu;
+            zifu = document.getElementById('zifu');
+            zifu.innerHTML = '';
+            zhi = document.getElementById('zhi').value;
+            try {
+                if (zhi == '') throw '值是空的';
+                if (isNaN(zhi)) throw '值非数字';
+                zhi = Number(zhi);
+                if (zhi > 10) throw '个位数数字';
+                if (zhi < 9) throw '大于个位数的数字';
+            }
+            catch (err) {
+                zifu.innerHTML = '报错' + err;
+            }
+        }
+    </script>
+</body>
+
+</html>
