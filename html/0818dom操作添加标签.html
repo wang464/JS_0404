@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>添加标签</title>
+</head>
+<body>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>你好啊</p>
+    <!-- <p>5</p> -->
+    <script>
+    x = document.getElementsByTagName('p');
+    for (i=0; i<x.length; i++){
+        document.write(x[i].innerHTML);
+        document.write('<br>');
+    }
+    // x 储存所有的p标签的数量
+    // 如果i的值小于p标签的数量.那么循环次数加1;
+    // 在文档中写出p数组里面的第[i个元素].写出这个p标签里面的内容
+    // 在p标签写出的内容后面.加br 换行符
+    // 重复直至所有内容都遍历完成.
+    </script>
+</body>
+</html>

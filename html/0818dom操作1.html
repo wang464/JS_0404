@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dom操作</title>
+</head>
+<body>
+    <p id="in">hello world</p>
+    <script>
+    var tt = document.getElementById('in').innerHTML;
+    document.write(tt);
+    </script>
+
+    <h1 onclick="this.innerHTML=innerHTM='你好'">点击更换文字</h1>
+    <h1 onclick="change(this)">另外一种写法</h1>
+
+    <script>
+    function change(x) {
+        x.innerHTML ='我是谁?';
+    }
+    </script>
+</body>
+</html>
