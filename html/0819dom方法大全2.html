@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document的使用方法2   </title>
+</head>
+<body>
+    <script>
+    document.write('ni');
+    document.write('hao');
+    
+    document.writeln('hello');
+    document.writeln('world');
+    document.writeln('world');
+    document.writeln('world');
+    document.writeln('world');
+    document.writeln('world');
+    document.writeln('world');
+    document.writeln('world');    
+    </script>
+<!-- 例子2 -->
+    <input type="text" size="20"><br>
+    <input type="text" size="20"><br>
+    <input type="text" size="20"><br>
+    <button onclick="btn()" >弹出有多少输入框的答案</button>
+    <script>
+    function btn() {
+        var x = document.getElementsByTagName('input');
+        alert(x.length);
+    }
+    </script>
+    <!-- 例子3 -->
+    <input name="1" type="radio" value="2">
+    <input name="1" type="radio" value="1">
+    <button onclick="btn2()">弹出有多少个选项</button>
+    <script>
+    function btn2() {
+        var x = document.getElementsByName('1');
+        alert(x.length);
+    }
+    </script>
+    <!-- 例子4 -->
+    <p id="id" onclick="getid()">通过id查找</p>
+    <script>
+    function getid() {
+        var x = document.getElementById('id');
+        alert(x.innerHTML);
+    }
+    </script>
+</body>
+</html>
