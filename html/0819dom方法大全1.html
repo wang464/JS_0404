@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>write方法</title>
+</head>
+<body>
+    <script>
+    document.write('hello world!')    
+    </script>
+    <!-- 例子2 -->
+    <script>
+    document.write("<h2>hello world ! </h2>")
+    </script>
+    <!-- 例子3 -->
+    <a name='html'>html 教程</a><br>
+    <a name='CSS'>CSS 教程</a><br>
+    <a name='JS'>JS 教程</a> <br>   
+    <a href="#">JS教程 </a>
+    
+    <p>锚点的数量</p>
+    <script>
+    document.write(document.anchors.length);
+    </script>
+    <!-- 例子4 -->
+    <p>第一个锚点</p>
+    <script>
+    document.write(document.anchors[0].innerHTML);
+    </script>
+    <!-- 例子5 -->
+    <form name="#" action="#1">1</form>
+    <form action="##">2</form>
+    <form action="###">3</form>
+    <script>
+    document.write(document.forms.length);
+    </script>
+    <!-- 例子6 -->
+    <script>
+    // 第一个表单的action号
+    document.write(document.forms[0].name);
+    // document.write(document.forms[0].action);
+    // document.write(document.forms[1].innerHTML);
+    // document.write(document.forms[2].innerHTML);
+    </script>
+    <!-- 例子7返回文档中的图像数量 -->
+    <img src="#" alt="看看有没有">
+    <img src="../images/deng1.gif" id="nida" alt="1">
+    <img src="../images/deng2.gif" alt="2">
+    <script>
+    document.write(document.images.length);
+    </script>
+    <!-- 例子8 -->
+    <script>
+    // document.write(document.images[0].src);
+    // document.write(document.images[1].src);
+    // document.write(document.images[1].id);
+    </script>
+    <!-- 例子9 链接数 -->
+    <br>
+    <a href="http://www.www.com" style="text-decoration:none">href2</a>
+    <a href="http://www.www.com">href3</a>
+    <a >href4</a>
+    <p>链接数量</p>
+    <script>
+    document.write(document.links.length);
+    document.write(document.links[0].innerHTML);
+    document.write(document.links[0].href);
+    document.write(document.links[0].style);
+    </script>
+    <!-- 例子10 输入新文档 -->
+    <script>
+    function creathtml() {
+        var doc = document.open('text/html','replace');
+        var txt = '<!DOCTYPE html><html><body>覆盖原来的网页内容</body></html>';
+        doc.write(txt);
+        doc.close();
+    }
+    </script>
+    <button onclick="creathtml()">覆盖原来的文档</button>
+</body>
+</html>
