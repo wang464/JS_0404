@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="1">
+    <title>css基础</title>
+    <style>
+    div {
+        width: 100px;
+        height: 75px;
+        background-color: red;
+        border: 1px solid #000;
+    }
+    div#demo {
+        transform: rotate(30deg);
+        box-shadow: 10px 10px 5px #888888;
+    }
+    div#de {
+        border-radius: 20px;
+    }
+    div#dem {
+        border: 1px solid #000;
+        width: 250px;
+        border-image: url(border.png) 30 30 round;
+    }
+    </style>
+</head>
+<body>
+    <div>
+
+        这是一个盒子
+    </div>
+    <div id="de">空盒子</div>
+    <div id="demo">这是第二个盒子</div>
+
+    <div id="dem">图片边框</div>
+
+    <img src="border.png" alt="">
+
+</body>
+</html>
