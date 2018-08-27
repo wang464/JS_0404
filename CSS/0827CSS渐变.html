@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="1">
+    <title>渐变网页</title>
+    <style>
+    div#demo {
+        height: 200px;
+        background:linear-gradient(red, blue);
+    }
+    div#dem {
+        height: 200px;
+        background: linear-gradient(to right, red, blue);
+    }
+    div#de {
+        height: 200px;
+        background: linear-gradient(to bottom right, yellow, blue);
+    }
+    div#d {
+        height: 200px;
+        background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);         
+    }
+    div#d:hover {
+        background: #bbb;
+    }
+    </style>
+</head>
+<body>
+    <div id="demo">
+        从上到下渐变
+    </div>
+    <div id="dem">
+        从左到右渐变
+    </div>
+    <div id="de">
+        对角渐变
+    </div>
+    <div id="d">
+        七彩渐变
+    </div>
+</body>
+</html>
