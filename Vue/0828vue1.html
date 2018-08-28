@@ -22,5 +22,16 @@
         }
     })
     </script>
+    <div id="ap">
+        <ol>
+            <todo-item
+            v-for='item in groceryList'
+            v-bind:todo='item'
+            v-bind:key='item.id'
+            >                
+            </todo-item>
+        </ol>
+    </div>
+    <script src="0828vue1.js"></script>
 </body>
 </html>
