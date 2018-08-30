@@ -1,9 +1,12 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <h1 v-text="msg"></h1>   
-  
+    <h1>{{ msg }}</h1> 
+    <ul>
+      <li v-for="item in items">
+        {{item.label}}
+      </li>
+    </ul>
+
   </div>
 </template>
 
@@ -12,7 +15,17 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: '原来的'
+      msg: '尝试做一个list',
+      items:[
+        {
+          label:'coding',
+          isFiinished:false
+        },
+        {
+          label:'walking',
+          isFiinished:true,
+        },
+      ]
     }
   }
 }
