@@ -2,9 +2,9 @@
   <div class="hello">
     <h1>{{ msg }}</h1> 
     <ul>
-      <li v-for="item in items">
-        {{item.label}}
-      </li>
+      <!-- <li v-for="item in items"> -->
+        <!-- {{item.label}} -->
+      <!-- </li> -->
     </ul>
 
   </div>

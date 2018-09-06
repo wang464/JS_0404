@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3">
+    <title>3D轮播图</title>
+    <style>
+        .carousel {
+            position: relative;
+            padding: 20px;
+            perspective: 500px;
+            overflow: hidden;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .carousel>* {
+            flex: 0 0 auto;
+        }
+
+        .carousel figure {
+            margin: 0;
+            width: 60%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        .carousel figure img {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 0 0px;
+            cursor: pointer;
+            background-size: 100% 100%;
+        }
+
+        .carousel figure img:not(:first-of-type) {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .nav {
+            position: absolute;
+            width: 44px;
+            height: 44px;
+            background: #ddd;
+            top: calc(50% - 22px);
+            cursor: pointer;
+        }
+
+        div.next {
+            right: 0px;
+            background-position: right top;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div.prev {
+            left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carousel yice" data-gap="100">
+        <figure class="images">
+            <img src="http://www.jq22.com/img/cs/500x300-1.png">
+            <img src="http://www.jq22.com/img/cs/500x300-2.png">
+            <img src="http://www.jq22.com/img/cs/500x300-3.png">
+            <img src="http://www.jq22.com/img/cs/500x300-4.png">
+            <img src="http://www.jq22.com/img/cs/500x300-5.png">
+            <img src="http://www.jq22.com/img/cs/500x300-6.png">
+            <img src="http://www.jq22.com/img/cs/500x300-7.png">
+            <img src="http://www.jq22.com/img/cs/500x300-8.png">
+            <img src="http://www.jq22.com/img/cs/500x300-9.png">
+        </figure>
+        <div class="nav prev">《</div>
+        <div class="nav next">》</div>
+    </div>
+
+</body>
+
+</html>

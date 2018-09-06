@@ -4,7 +4,7 @@
     <input type="text" v-model="newItem" v-on:keyup.enter='addName' >
     <!-- <HelloWorld/>   -->
     <ul>
-      <li v-for="item in items" v-bind:class="{finished:item.isFinished}" v-on:click="toggleFinish(item)">{{item.label}}</li>
+      <!-- <li v-for="item in items" v-bind:class="{finished:item.isFinished}" v-on:click="toggleFinish(item)">{{item.label}}</li> -->
     </ul>
   </div>
 </template>
