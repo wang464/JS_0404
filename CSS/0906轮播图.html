@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="3">
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
     <title>3D轮播图</title>
+
     <style>
         .carousel {
             position: relative;
@@ -17,6 +19,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
         }
 
         .carousel>* {
@@ -59,10 +62,7 @@
         div.next {
             right: 0px;
             background-position: right top;
-            margin: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            /* transform: translateY(-50%); */
         }
 
         div.prev {
@@ -86,8 +86,101 @@
         </figure>
         <div class="nav prev">《</div>
         <div class="nav next">》</div>
-    </div>
 
+    </div>
+    <script>
+        window.addEventListener('load', function () {
+            var carousels = document.querySelectorAll('.carousel');
+
+            for (var i = 0; i < carousels.length; i++) {
+                carousel(carousels[i]);
+
+
+            }
+        });
+
+        //封装
+        function carousel(root) {
+            var figure = root.querySelector('figure'),
+                nav = root.querySelector('nav'),
+                images = figure.children,
+                n = images.length,
+                gap = root.dataset.gap || 0,
+                bfc = 'bfc' in root.dataset,
+                theta = 2 * Math.PI / n,
+                currImage = 0;
+
+            setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
+            window.addEventListener('resize', function () {
+                setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
+            });
+
+            setupNavigation();
+
+            function setupCarousel(n, s) {
+                var apothem = s / (2 * Math.tan(Math.PI / n));
+
+                figure.style.transformOrigin = '50% 50% ' + -apothem + 'px';
+
+                for (var i = 0; i < n; i++) {
+                    var padTB = gap / 2 + 'px';
+                    var padLR = gap + 'px';
+                    $(images[i]).css('padding', (padTB))
+
+                }
+                for (i = 1; i < n; i++) {
+                    var num = i * theta
+
+                    // console.log(apothem)
+                    images[i].style.transformOrigin = '50% 50%' + -apothem + 'px';
+                    images[i].style.transform = 'rotateY(' + i * theta + 'rad)';
+                    console.log(num)
+                }
+                if (bfc)
+                    for (i = 0; i < n; i++) {
+                        images[i].style.backfaceVisibility = 'hidden';
+                    }
+                rotateCarousel(currImage);
+            }
+
+            function setupNavigation() {
+                // var nav =  document.getElementsByClassName('nav').addEventListener('click', onClick, true);;
+                $('.nav').on('click', onClick)
+
+
+                function onClick(e) {
+                    e.stopPropagation();
+                    var t = e.target;
+                    if (t.classList.contains('next')) {
+                        currImage++;
+                    } else {
+                        currImage--;
+                    }
+                    rotateCarousel(currImage);
+                }
+            }
+
+            function rotateCarousel(imageIndex) {
+                figure.style.transform = 'rotateY(' + imageIndex * -theta + 'rad)';
+            };
+            // 启动定时器
+            $('.carousel .nav, .carousel img').hover(function () {
+                clearInterval(timer);
+            }, function () {
+                timer = setInterval(function () {
+                    currImage++
+                    rotateCarousel(currImage);
+                }, 2000);
+            });
+            var timer = null;
+            timer = setInterval(function () {
+                currImage++
+                rotateCarousel(currImage);
+            }, 2000);
+
+        }
+
+    </script>
 </body>
 
 </html>
