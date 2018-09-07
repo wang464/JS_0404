@@ -5,31 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>居中技巧大全</title>
-    <style>
-        .content{
-                width:400px;
-                background:#ccc;
-                line-height:100px;
-                margin:auto;
-                }
-
-    </style>
+    <title>Document</title>
     <script src="../jQuery/jquery_3.3.1_jquery.js"></script>
     <script type="text/javascript">
+        /* 鼠标点击特效 */
         var a_idx = 0;
-        jQuery(document).ready(function($) {
-            $("body").click(function(e) {
+        jQuery(document).ready(function ($) {
+            $("body").click(function (e) {
                 var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
                 var $i = $("<span/>").text(a[a_idx]);
                 a_idx = (a_idx + 1) % a.length;
                 var x = e.pageX, y = e.pageY; $i.css({
-                    "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+                    "z-index": 99999999999999999999999999999999999999999999999999999999999999999999,
                     "top": y - 20,
                     "left": x,
                     "position": "absolute",
                     "font-weight": "bold",
-                    "color": "#ff6651"
+                    // "color": "red",
+                    "font-size": "40px"
                 });
                 $("body").append($i);
                 $i.animate({
@@ -42,16 +35,16 @@
                     });
             });
         });
-
     </script>
 </head>
 
 <body>
-    
-<h1>你好啊</h1>
+    <h1>nihc</h1>
 
-<div class="content">你好啊 </div>
-
+    <script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script>
+    <div id="lwlhitokoto">
+        <script>lwlhitokoto()</script>
+    </div>
 </body>
 
 </html>
