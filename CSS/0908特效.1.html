@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>纯JS实现特效</title>
+    <script src="../jQuery/jquery_3.3.1_jquery.js"></script>
+    <script>
+        var a_idx = 0;
+        jQuery(document).ready(function ($) {
+            $("body").click(function (e) {
+                var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+                var $i = $("<span/>").text(a[a_idx]);
+                a_idx = (a_idx + 1) % a.length;
+                var x = e.pageX, y = e.pageY;
+                $i.css({
+                    "z-index": 99999999999999999999999999999999999999999999999999999999999999999999,
+                    "top": y - 20,
+                    "left": x,
+                    "position": "absolute",
+                    "font-weight": "bold",
+                    "color": "red",
+                    "font-size": "40px"
+                });
+                $("body").append($i);    //暂时改不了
+                $i.animate({
+                    "top": y - 180,
+                    "opacity": 0
+                },
+                    1500,
+                    function () {
+                        // $i.remove();
+                        i.parntNode.removeChild(i);
+                    });
+            });
+        });
+    // 2018-9-8_16:18:27   失败了 . 只替换了一个remove()方法. 先暂停吧. 
+    </script>
+</head>
+<body>
+    <h1>你好啊</h1>
+    <h1>你好啊</h1>
+    <h1>你好啊</h1>
+    <h1>你好啊</h1>
+    <h1>你好啊</h1>
+</body>
+</html>
