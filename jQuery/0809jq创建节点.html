@@ -18,6 +18,7 @@
     </ul>
     <button id="btn_1">你好啊</button>
     <button id="btn_2">我不好</button>
+    <button id="btn_3">查找第一个节点</button>
     <script>
         $(function(){
 
@@ -34,7 +35,12 @@
         })
         // 创建节点的方法. 用一个变量储存节点的值
         // 之后使用click进行鼠标点击触发
-        // 触发的时间使用function(){使用append方法}        
+        // 触发的时间使用function(){使用append方法}    
+        var $uuu = $('.nm_ul li:eq(0)');
+        var uu = $uuu.text();
+        $('#btn_3').click(function(){
+            alert(uu);
+        })
     </script>
 </body>
 
