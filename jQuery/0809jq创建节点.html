@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../jQuery/jquery_3.3.1_jquery.js"></script>
+    <title>创建节点</title>
+</head>
+
+<body>
+    <p class="nm_p">欢迎访问</p>
+    <ul class="nm_ul">
+        <li>简单</li>
+        <li>易懂</li>
+        <li>魔法</li>
+    </ul>
+    <button id="btn_1">你好啊</button>
+    <button id="btn_2">我不好</button>
+    <script>
+        $(function(){
+
+        var $li_1 = $('<li>你好啊</li>');
+        var $li_2 = $('<li></li>');
+        var $ul = $('.nm_ul');
+        $('#btn_2').click(function () {
+            $ul.append($li_1);
+        });
+        $('#btn_1').click(function(){
+            // alert('nihc');
+            $ul.append($li_2);
+        });
+        })
+        // 创建节点的方法. 用一个变量储存节点的值
+        // 之后使用click进行鼠标点击触发
+        // 触发的时间使用function(){使用append方法}        
+    </script>
+</body>
+
+</html>
