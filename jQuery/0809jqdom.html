@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery查询</title>
+    <script src="../jQuery/jquery_3.3.1_jquery.js"></script>
+</head>
+<body>
+    <p class="nm_p" title="欢迎访问">欢迎</p>
+    <ul class="nm_ul">
+        <li title="123">123</li>
+        <li title="文字">文字</li>
+        <li title="jQuery">jQuery</li>
+    </ul>
+    <button id="btn_1">1</button>
+    <button id="btn_2">2</button>
+    <button id="btn_3">3</button>
+    <script>
+    $(function () {
+        var $pp = $('.nm_p'); // 获取类是nm_p的节点
+        var $li = $('.nm_ul li:eq(0)'); //获取第二个li元素
+        var p_txt = $pp.attr('title');   // 获取nm_p的title属性
+        var ul_txt = $li.attr('title');  // 获取第二个li元素的title属性
+        var p_tt = $pp.text();
+        $('#btn_1').click(function () {
+            alert(ul_txt);
+        });
+        $('#btn_2').click(function(){
+            alert(p_txt);
+        });
+        $('#btn_3').click(function(){
+            alert(p_tt);
+        })
+    })
+    
+    </script>
+</body>
+</html>
