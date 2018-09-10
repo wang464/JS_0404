@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>替换节点</title>
+    <script src="../jQuery/jquery_3.3.1_jquery.js"></script>
+
+</head>
+<body>
+<p class="um_p">欢迎访问</p>    
+<h4>上面的内容变化</h4>
+<button id="1">替换</button>
+<button id="2">替换2</button>
+
+<script>
+$(function(){
+    $('#1').click(function(){
+        $('.um_p').replaceWith('<p class="um_p">欢迎你大爷的</p>');
+    }),
+    $('#2').click(function(){
+        $('<p class="um_p">欢迎访问啊</p>').replaceAll('.um_p');
+    })
+})
+</script>
+    
+</body>
+</html>
