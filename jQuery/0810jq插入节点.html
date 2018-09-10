@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>插入节点</title>
+    <script src="../jQuery/jquery_3.3.1_jquery.js"></script>
+
+</head>
+
+<body>
+    <div>
+        <p class="um_p" title="欢迎">欢迎
+            <!-- <h3>我在哪儿?</h3> -->
+        </p>
+
+    </div>
+    <ul class="nm_ul">
+        <li title="标题1">标题1</li>
+        <li title="标题2">标题2</li>
+        <li title="标题3">标题3</li>
+        <li class="li1">标题4</li>
+    </ul>
+    <button class="btn1">按钮1</button>
+    <button class="btn2">按钮2</button>
+    <button class="btn3">按钮3</button>
+    <button class="btn4">按钮4</button>
+    <button class="btn5">按钮5</button>
+    <button class="btn6">按钮6</button>
+    <button class="btn7">按钮7</button>
+    <script>
+        $(function () {
+            $(".btn1").click(function () {
+                $('p').append('<b>你好啊</b>');  // 在所选标签的下级里面添加
+            }),
+                // 这个不知道怎么用. 先不用// 功能一样和上面的写法相反. 
+                $('.btn2').click(function () {
+                    $('<b>我我我</b>').appendTo('p');
+                })
+            $('.btn3').click(function () {
+                $('p').prepend('<b>我不好</b>');
+            }),
+                $('.btn4').click(function () {
+                    $('<b>反着写</b>').prependTo('p');
+                })// 功能一样和上面的写法相反. 
+        })
+    </script>
+</body>
+
+</html>
