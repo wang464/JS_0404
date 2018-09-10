@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>删除节点</title>
+    <script src="../jQuery/jquery_3.3.1_jquery.js"></script>
+</head>
+
+<body>
+    <p class="nm_p">欢迎</p>
+    <ul class="nm_ul">
+        <li title="nm_li1">1标题一</li>
+        <li title="nm_li2">2标题二</li>
+        <li title="nm_li3">3标题三</li>
+    </ul>
+    <button id="btn1">删除标题一</button>
+    <button id="btn_1">创建标题1</button>
+    <button id="btn3">移除所有li标签</button>
+    <button id="btn4">移动元素</button>
+    <script>
+        $(function () {
+            // var lieq1 = $('.nm_ul li:eq(0)');   //_1是一起的
+            $('#btn1').click(function () {
+                // lieq1.empty();    //_1是一起的
+                $('.nm_ul li:eq(1)').remove();
+            });
+            $('#btn3').click(function(){
+                $('li').remove();
+            })
+            $('#btn4').click(function(){
+                $('.nm_ul li:eq(1)').appendTo('.nm_ul');
+            })
+
+            //创建标题
+            var liappend= $('<li>创建标题4</li>');  //要添加的内容
+            // var ul = $('.nm_ul');  //储存要添加到的元素    //_2是一起的
+            $('#btn_1').click(function(){
+                // ul.append(liappend);      //_2是一起的
+                $('.nm_ul').append(liappend);
+            })
+            //2018-9-10_18:52:32   我发现我在添加之后没法添加多个或者一直进行添加. 
+        })
+
+    </script>
+</body>
+
+</html>
