@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>复制节点</title>
+    <script src="../jQuery/jquery_3.3.1_jquery.js"></script>
+
+</head>
+<body>
+<p class="nm_p">欢迎来到</p>
+<ul class="nm_ul">
+    <li>易懂的jq魔法</li>
+    <li>你要走?</li>
+    <li>我是谁?</li>
+    <li>world</li>
+</ul>
+<script>
+    // $(function(){
+    //     $('.nm_ul li').click(function(){
+    //         $(this).clone(true).appendTo('.nm_ul');
+    //     })
+    // })    // 复制的节点没有复制功能   
+    $(function(){
+        $('.nm_ul li').click(function(){
+            $(this).clone(true).appendTo('ul');
+        })  // 复制的节点有复制的功能
+    })    
+</script>
+</body>
+</html>
