@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jQuery/jquery_3.3.1_jquery.js"></script>
+
+</head>
+<body>
+    <!-- <ol>
+        <li>1<span onclick="up(this)">上</span>
+        <span onclick="down(this)">下</span></li>
+        <li>2<span onclick="up(this)">上</span>
+        <span onclick="down(this)">下</span></li>
+        <li>3<span onclick="up(this)">上</span>
+        <span onclick="down(this)">下</span></li>
+        <li>4<span onclick="up(this)">上</span>
+        <span onclick="down(this)">下</span></li>        
+        <li>5<span onclick="up(this)">上</span>
+        <span onclick="down(this)">下</span></li>
+        
+    </ol> -->
+    <table>
+        <tr>
+            <td>111</td>
+            <td>
+                <span onclick="up(this);">上移</span>
+                <span onclick="down(this);">下移</span>
+            </td>
+        </tr>
+        <tr>
+            <td>222</td>
+            <td>
+                <span onclick="up(this);">上移</span>
+                <span onclick="down(this);">下移</span>
+            </td>
+        </tr>
+        <tr>
+            <td>333</td>
+            <td>
+                <span onclick="up(this);">上移</span>
+                <span onclick="down(this);">下移</span>
+            </td>
+        </tr>
+        <tr>
+            <td>444</td>
+            <td>
+                <span onclick="up(this);">上移</span>
+                <span onclick="down(this);">下移</span>
+            </td>
+        </tr>
+        <tr>
+            <td>555</td>
+            <td>
+                <span onclick="up(this);">上移</span>
+                <span onclick="down(this);">下移</span>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+    
+    function up(obj){
+        var This=$(obj).parent().parent();
+        var prev=This.prev();
+        if(prev.length>0){
+            This.insertBefore(prev);
+        }
+    }
+    function down(obj){
+        var This=$(obj).parent().parent();
+        var next=This.next();
+        if(next.length>0){
+            This.insertAfter(next);
+        }
+    }
+
+    </script>
+</body>
+</html>
