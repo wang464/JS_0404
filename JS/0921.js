@@ -8,20 +8,21 @@
 //     }
 // };
 
-// console.log(Math.random());
+// console.log(Math.random()); // 随机数
 
-const http = require('http');
+// // 显示时间
+// setTimeout(() => {
+//     console.log('你好啊');
+// }, 1000);
 
-const hostname = '127.0.0.1';
-const port = 3000;
+// setTimeout(function () {
+//     console.log('你好啊');
+// }, 5000); // 两者是等价的写法. 上面一种是es6的语法. 这个是原来的语法
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World!\n');
-});
+var time = 0;
 
-server.listen(port, hostname, () => {
-  console.log(`服务器运行在 http://${hostname}:${port}/`);
-});
-
+setInterval(function () {
+    time +=2;
+    console.log(time + '一直写下去');
+    
+},1000);
