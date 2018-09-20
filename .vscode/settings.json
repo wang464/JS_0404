@@ -6,4 +6,7 @@
     "editor.wordWrap": "on",
     //设置自动换行 
 
+      // 分配给新文件的默认语言模式。
+  "files.defaultLanguage": "html"
+
 }
