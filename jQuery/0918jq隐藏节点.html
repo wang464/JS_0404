@@ -12,6 +12,7 @@
 
 <body>
     <button>点击</button>
+    <p>我想看看有没有</p>
     <!-- <script>
         $(function(){
             $('button').click(function() {
@@ -19,12 +20,17 @@
             }),
     })
     </script> -->
+    <h3>点击隐藏</h3>
     <script>
     $(document).ready(function(){
         $('button').click(function(){
             $(this).hide();
         })
-    })
+    }) // 点击隐藏
+    $('p').hide(); //隐藏
+    $('h3').click(function(){
+        $(this).hide();
+    })  // 点击隐藏. 我不知道和上面的写法有什么不同. 效果是一样的. 
     </script>
 
 </body>
