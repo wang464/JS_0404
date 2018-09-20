@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,24 @@
     <script src="../jQuery/jquery_3.3.1_jquery.js"></script>
 
 </head>
+
 <body>
-    
+    <button>点击</button>
+    <!-- <script>
+        $(function(){
+            $('button').click(function() {
+                $(this).hide();
+            }),
+    })
+    </script> -->
+    <script>
+    $(document).ready(function(){
+        $('button').click(function(){
+            $(this).hide();
+        })
+    })
+    </script>
+
 </body>
+
 </html>
