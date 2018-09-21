@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue表单输入</title>
+    <script src="./vue.js"></script>
+    <style>
+    div {
+        width: 200px;;
+        height: 200px;
+        border: 1px solid #c3c3c3;
+    }
+    </style>
+</head>
+
+<body>
+    <div id='example-3'>
+        <input type="checkbox" value="Jack" v-model="checkedNames">
+        <label for="jack">Jack</label>
+        <input type="checkbox" value="John" v-model="checkedNames">
+        <label for="john">John</label>
+        <input type="checkbox" value="Mike" v-model="checkedNames">
+        <label for="mike">Mike</label>
+        <br>
+        <span>名字大全: {{ checkedNames }}</span>
+    </div>
+
+    <div id="example4">
+        <select v-model='selected'>
+            <option disabled value="">请选择</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
+        <span>Selected : {{selected}}</span>
+    </div>
+    <script>
+        var example3 = new Vue({
+            el: '#example-3',
+            data: {
+                checkedNames: []
+            }
+        })
+        var example4 = new Vue({
+            el: '#example4',
+            data: {
+                selected: ''
+            }
+        })
+
+    </script>
+</body>
+
+</html>
