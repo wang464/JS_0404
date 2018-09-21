@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue例子</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+
+<body>
+    <div id="app5">
+        <p>{{message}}</p>
+        <button v-on:click='reverseMessage'>你好啊</button>
+    </div>
+    <div id="app6">
+        <p>{{mess}}</p>
+        <input v-model='mess'>
+    </div>
+    <ol>
+        <todo-item></todo-item>
+    </ol>
+    <h1 v-show="ok">Hello!</h1>
+    
+    <script>
+        var app5 = new Vue({
+            el: '#app5',
+            data:{
+                message:'hello world'
+            },
+            methods:{
+                reverseMessage: function () {
+                    // this.message = this.message.split('').reverse().join('')  // 字符顺序翻转
+                    this.message = this.message.toUpperCase() // 字符转化为大写.
+                }
+            }
+        })
+        var app6 = new Vue({
+            el: '#app6',
+            data: {
+                mess:'你好啊'
+            }
+        })
+        Vue.component('todo-item', {
+            props:['todo'],
+            template:'<li>这是一个代办事项</li>'
+        })
+
+   </script>
+</body>
+
+</html>
