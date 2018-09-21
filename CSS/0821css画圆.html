@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS画一个圆的例子</title>
+
+    <style>
+        .div1 {
+            background: #fb3;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            border-radius: 50%;
+            transition: all 0.25s ease-in;
+        }
+
+        .div1:hover {
+            background: #ff1d50;
+            width: 400px;
+            height: 200px;
+            border-radius: 50%;
+            -webkit-transition: all 0.2s ease-in;
+            transition: all 0.2s ease-in;
+        }
+
+        .div2 {
+            background: #fb3;
+            width: 100px;
+            height: 100px;
+            border-radius: 100% 0 0 0;
+            transition: all 0.25s ease-in;
+        }
+
+        .div3 {
+            background: #fb3;
+            width: 100px;
+            height: 100px;
+            border-radius: 0 0 0 100%;
+            transition: all 0.25s ease-in;
+        }
+
+        .div4 {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .div6 {
+            width: 200px;
+            height: 100px;
+            background: #58a;
+            background:
+                linear-gradient(-45deg, transparent 15px, #58a 0) right,
+                linear-gradient(45deg, transparent 15px, #655 0) left;
+            background-size: 50% 100%;
+            background-repeat: no-repeat;
+        }
+
+
+        /* ->  首先你得知道，border-radius不仅仅支持整数，还支持百分比    */
+    </style>
+</head>
+
+<body>
+    <div class="div1">圆形</div>
+    <div class="div2">两个半圆1</div>
+    <div class="div3">两个半圆2</div>
+    <div class="div4">平行四边形</div>
+    <div class="div6">切边矩形</div>
+</body>
+
+</html>
