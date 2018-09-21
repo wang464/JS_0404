@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue事件监听</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        button {
+            width: 100px;
+            height: 200px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="example">
+        <button v-on:click='counter +=1'>add 1</button>
+        <p>你点击了{{counter}}</p>
+    </div>
+    <div id="example2">
+        <button v-on:click='say("hi")'>say hi</button>
+        <button v-on:click='say("what")'>say what</button>
+
+    </div>
+    <script>
+        var example = new Vue({
+            el: '#example',
+            data: {
+                counter: 0
+            }
+        })
+        var example2 = new Vue({
+            el: '#example2',
+            methods: {
+                say: function (mess) {
+                    console.log(mess);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
