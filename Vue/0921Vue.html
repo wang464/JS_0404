@@ -18,10 +18,10 @@
     <div id="app6">
         <p>{{mess}}</p>
         <input v-model='mess'>
-    </div>
-    <ol>
+        
         <todo-item></todo-item>
-    </ol>
+        
+    </div>
     <h1 v-show="ok">Hello!</h1>
     
     <script>
@@ -37,17 +37,19 @@
                 }
             }
         })
+        var todo_item = Vue.component('todo-item', {
+            props:['todo'],
+            template:'<li>这是一个代办事项</li>'
+        })
         var app6 = new Vue({
             el: '#app6',
             data: {
                 mess:'你好啊'
+            },
+            component: {
+                'todo-item': todo_item
             }
         })
-        Vue.component('todo-item', {
-            props:['todo'],
-            template:'<li>这是一个代办事项</li>'
-        })
-
    </script>
 </body>
 
