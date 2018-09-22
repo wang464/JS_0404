@@ -1,4 +1,5 @@
-{ // 同步设置
+{ 
+  // 同步设置
   "sync.gist": "337f5b81d75c3eb3dcf1687afffd2af9",
   "sync.quietSync": false,
   "sync.askGistName": false,
