@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>组件中的prop方法</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>hello</p>
+        <blog-post post-title='我是谁?'></blog-post>
+    </div>
+
+    <script>
+        blogPost = Vue.component('blog-post', {
+            props: ['postTitle'],
+            template: `<h3>{{  postTitle  }}</h3>`
+        })
+        Vue.component('blog-post', {
+            // 在 JavaScript 中是 camelCase 的
+            props: ['postTitle'],
+            template: '<h3>{{ postTitle }}</h3>'
+        })
+        var app = new Vue({
+            el: '#app',
+            component: {
+                'blog-post': blogPost,
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>

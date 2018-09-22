@@ -24,6 +24,7 @@
     </div>
     <h1 v-show="ok">Hello!</h1>
     
+    
     <script>
         var app5 = new Vue({
             el: '#app5',
@@ -39,7 +40,7 @@
         })
         var todo_item = Vue.component('todo-item', {
             props:['todo'],
-            template:'<li>这是一个代办事项</li>'
+            template:'<li>这是一个代办事项{{todo}}</li>'
         })
         var app6 = new Vue({
             el: '#app6',

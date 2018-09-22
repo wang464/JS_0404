@@ -1,4 +1,16 @@
-{
+{ // 同步设置
+  "sync.gist": "337f5b81d75c3eb3dcf1687afffd2af9",
+  "sync.quietSync": false,
+  "sync.askGistName": false,
+  "sync.removeExtensions": true,
+  "sync.syncExtensions": true,
+  "sync.autoDownload": false,
+  "sync.autoUpload": false,
+  "sync.forceDownload": false,
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+  "workbench.iconTheme": "vscode-icons",
+  "git.enableSmartCommit": true,
+  "vsicons.dontShowNewVersionMessage": true,
   // 控制是否将代码段与其他建议一起显示以及它们的排序方式。
   "editor.snippetSuggestions": "top",
   // 若为 "true"，Emmet 建议将显示为代码片段。你可以在 editor.snippetSuggestions 设置中排列顺序。
@@ -7,5 +19,21 @@
   //设置自动换行 
   // 分配给新文件的默认语言模式。
   "files.defaultLanguage": "html",
+  // 要使用vetur需要进行的配置
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue"
+  ],
+  // diff代码对比 代码段落对比. true表示在右键菜单可见. false表示不在鼠标右键菜单显示. 我只显示两两个. 第一个和第二个. 用来对比
+  "partialDiff.commandsOnContextMenu": {
+    "markSection1": true,
+    "markSection2AndTakeDiff": true,
+    "diffSelectionWithClipboard": false,
+    "diffVisibleEditors": false,
+    "togglePreComparisonTextNormalizationRules": false
+  },
+  // 设置默认打开的浏览器为谷歌
+  "open-in-browser.default": "chrome"
 
 }
