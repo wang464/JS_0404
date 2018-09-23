@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>if show for指令的例子</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p v-if='show'>这是使用v-if</p>
+        <!-- 这个是if的隐藏和显示 -->
+        <button v-on:click='ry'>toggle</button>
+        <h3>分割</h3>
+        <p v-show='sho'>这是使用v-show</p>
+        <button @click='ry1'>按钮</button>
+        <!-- 当满足条件的时候v-show会隐藏 而if会删除 -->
+        <h3>分割</h3>
+        <ul>
+            <li v-for='item of list'>{{item}}</li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                show: true,
+                sho: false,
+                list: [1, 2, 3]
+            },
+            methods: {
+                ry: function () {
+                    this.show = !this.show;
+                },
+                ry1: function () {
+                    this.sho = !this.sho;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
