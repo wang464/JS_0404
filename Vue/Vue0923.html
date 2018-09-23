@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue入门以及v-on的用法</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h2>{{ msg }} </h2>
+        <h2>{{ number }} </h2>
+        <!-- 另外一种写法 -->
+        <h2 v-text='number'>
+            <!-- 会把html标签直接在网页中显示出来 -->
+        </h2>
+        <h2 v-html='msg'>
+            <!-- 不会把html标签在网页里面显示出来 -->
+        </h2>
+    </div>
+    <!-- 方法二 -->
+    <div id="app1">
+        <!-- 方法一和方法二其实是一样的, 差别在于方法二把template写在了数据里面. 而方法一模板是在html里面的. -->
+    </div>
+
+    <div id="app2">
+        <!-- 显示hello. 当点击的时候hello 转化成world -->
+        <!-- 属性/事件/方法/ 网页原来的样子算是属性/点击事件算是事件/被调用的函数是方法. 一个完整的软件出现了.虽然是最简单的软件. 但网页已经在朝着一个界面就是一个软件前进. data里面存放属性. methods里面存放方法. 鼠标存放的是事件.  -->
+        <h2 v-on:click='onClick'>{{content}}</h2>
+        <h2 @click='onClick'>{{content}}
+            <!-- v-on: 可以简写成 @ 符号 -->
+            <!-- link来源视频https://www.imooc.com/video/16977  -->
+        </h2>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+
+            data: {
+                msg: '你好',
+                number: 123
+            }
+        })
+        var app1 = new Vue({
+            el: '#app1',
+            template: '<h2>我不好{{msg}}</h2>',
+            data: {
+                msg: '你好'
+            }
+        })
+        var app2 = new Vue({
+            el: '#app2',
+            data: {
+                content: 'hello'
+            },
+            methods: {
+                onClick: function () {
+                    this.content = 'world!'
+                }
+
+            }
+        })
+    </script>
+</body>
+
+</html>
