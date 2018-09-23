@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>计算属性和侦听器</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        性: <input v-model="firstName">
+        名: <input v-model="lastName">
+        <p>{{firstName}}</p>
+        <p>{{lastName}}</p>
+        <P>{{count}}
+            <!-- watch是侦听器, 就是实时监测事件是否出现. 就是原来内容是否进行了改变. 如果改变, 那么就执行侦听器里面设置好的内容. -->
+        </P>
+        <h4>{{fullName}}</h4>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                firstName: '',
+                lastName: '',
+                count: 0
+            },
+            computed: {
+                fullName: function () {
+                    return this.firstName + "" + this.lastName
+                }
+            },
+            watch: {
+                firstName: function () {
+                    this.count++
+                },
+                lastName: function () {
+                    this.count++
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
