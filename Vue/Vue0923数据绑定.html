@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>属性绑定和双向数据绑定</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div title="title">
+            <h2>hello</h2>
+            <!-- 这样没法进行属性绑定 -->
+        </div>
+        <div v-bind:title="title">
+            <h2>hello</h2>
+            <!-- 使用模板指令之后就可以生效了. -->
+        </div>
+        <div :title='title'>
+            <h2>hello</h2>
+            <!-- v-bind 可以简写为 :  -->
+        </div>
+        <div>
+            <h3>这里是单向绑定(不可以改数据, 只能显示数据)</h3>
+            <input type="text" :value="shuang">
+            <p>{{shuang}}</p>
+            <!-- 单向数据绑定 -->
+            <h3>下面是双向绑定</h3>
+            <input type="text" v-model="shuang">
+            <p>{{shuang}}</p>
+            <!-- v-model数据双向绑定. -->
+            <h4 @click='uiyj'>无聊写写</h4>
+            <h4 @click='uiyj1'>无聊写写</h4>
+        </div>
+    </div>
+    <div id="app1">
+
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                title: 'hello wrold',//属性绑定
+                shuang: '双向数据绑定'//数据双向绑定
+            },
+            methods: {
+                uiyj: function () {
+                    alert('弹出来')
+                },
+                uiyj1: ()=>{
+                    console.log('你好啊');
+                }
+                // 括号箭头函数和function等价.
+            }
+        })
+    </script>
+</body>
+
+</html>
