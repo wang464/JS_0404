@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>写一个todolist</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model='inputValue' @keyup.enter='submit'>
+        <button @click='submit'>提交</button>
+        <ul>
+            <li v-for='item of list'>
+                {{item}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                inputValue: 'hello',
+                list: []
+            },
+            methods: {
+                submit: function () {
+                    this.list.push(this.inputValue)
+                    this.inputValue = ''
+                    // 这样写有一个bug, 就是提交之后就清空. 空的也是可以被提交.
+                }
+            }
+        })
+
+
+
+    </script>
+</body>
+
+</html>
