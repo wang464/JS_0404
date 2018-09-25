@@ -12,22 +12,24 @@
 <body>
     <div id="app">
         <todo-item></todo-item>
+        <h2></h2>
 
     </div>
+    <!-- heels-->
     <script>
-        var todoitem = {
+        var todo_item = {
             template: '<li>这是一个组件</li>'
         }
         // 调用局部组件的步骤. 新建一个变量储存组件. 
-        // 在vue里面使用components: 进行声明
+        // 在vue里面使用 components: 进行声明
         new Vue({
             el: '#app',
             components: {
-                'todo-item': todoitem
+                'todo-item': todo_item
             },
             data: {
 
-            }
+            },
         })
     </script>
 
