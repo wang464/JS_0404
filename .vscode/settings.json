@@ -12,19 +12,19 @@
   "workbench.iconTheme": "vscode-icons",
   "git.enableSmartCommit": true,
   "vsicons.dontShowNewVersionMessage": true,
- 
+
   // 控制是否将代码段与其他建议一起显示以及它们的排序方式。
   "editor.snippetSuggestions": "top",
 
   // 若为 "true"，Emmet 建议将显示为代码片段。你可以在 editor.snippetSuggestions 设置中排列顺序。
   "emmet.showSuggestionsAsSnippets": true,
-  
-  //设置自动换行 
+
+  //设置自动换行
   "editor.wordWrap": "on",
 
-  //设置保存的时候自动格式化
-  "editor.formatOnSave": true,
-    
+  //设置保存的时候自动格式化现在是关闭状态. 因为我发现用处不大用的话true
+  "editor.formatOnSave": false,
+
   // 分配给新文件的默认语言模式。
   "files.defaultLanguage": "html",
 
@@ -38,24 +38,5 @@
   },
 
   // 设置默认打开的浏览器为谷歌
-  "open-in-browser.default": "chrome",
-
-  //ESlint配置, 对js/html/vue文件进行语法检查
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "html",
-    "vue",    
-  ],
-  "eslint.options": {
-    "plugins": ["html"]
-},
-  // 自动修正格式错误
-  "eslint.autoFixOnSave": true,
-
-  //Vetur 设置
-  "emmet.syntaxProfiles": {
-    "vue-html": "html",
-    "vue": "html"
-  } 
+  "open-in-browser.default": "chrome"
 }

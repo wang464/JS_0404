@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue用法尝试</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <input type="text" v-model='shuang'>
+        <p>{{shuang}}</p>
+        <h3 @click='de'>点击我</h3>
+        <h3 @click='dd'>点击我</h3>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                shuang: '每天都给你好看'
+            },
+            methods: {
+                de: function () {
+                    console.log('你好啊');
+                },
+                dd: function () {
+                    alert('你好啊')
+                }
+            },
+
+        })
+
+
+    </script>
+</body>
+
+</html>
