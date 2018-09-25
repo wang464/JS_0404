@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue组件的使用</title>
+    <script src="./vue.js"></script>
+    <style>
+    button {
+        border: 1px solid #c3c3c3;
+    }
+    </style>
+</head>
+
+
+<body>
+    <div id="app">
+        <input type="text" v-model='inputValue'>
+        <button @click='submit'>这是一个按钮</button>
+        <ul>
+            <todo-item></todo-item>
+        </ul>
+    </div>
+    <script>
+        Vue.component('todo-item', {
+            template: '<li>这是全局组件</li>'
+        })
+        new Vue({
+            el: '#app',
+            data: {
+                inputValue: "",
+                list: []
+            },
+            methods: {
+                submit: function () {
+                    this.list.push(this.inputValue),
+                        this.inputValue = ''
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
