@@ -12,31 +12,24 @@
   "workbench.iconTheme": "vscode-icons",
   "git.enableSmartCommit": true,
   "vsicons.dontShowNewVersionMessage": true,
-
   // 控制是否将代码段与其他建议一起显示以及它们的排序方式。
   "editor.snippetSuggestions": "top",
-
   // 若为 "true"，Emmet 建议将显示为代码片段。你可以在 editor.snippetSuggestions 设置中排列顺序。
   "emmet.showSuggestionsAsSnippets": true,
-
   //设置自动换行
   "editor.wordWrap": "on",
-
   //设置保存的时候自动格式化现在是关闭状态. 因为我发现用处不大用的话true
   "editor.formatOnSave": false,
-
   // 分配给新文件的默认语言模式。
   "files.defaultLanguage": "html",
-
   // diff代码对比 代码段落对比. true表示在右键菜单可见. false表示不在鼠标右键菜单显示. 我只显示两两个. 第一个和第二个. 用来对比
   "partialDiff.commandsOnContextMenu": {
-    "markSection1": true,
-    "markSection2AndTakeDiff": true,
+    "markSection1": false,
+    "markSection2AndTakeDiff": false,
     "diffSelectionWithClipboard": false,
     "diffVisibleEditors": false,
     "togglePreComparisonTextNormalizationRules": false
   },
-
   // 设置默认打开的浏览器为谷歌
-  "open-in-browser.default": "chrome"
+  // "open-in-browser.default": "chrome",
 }

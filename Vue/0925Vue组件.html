@@ -17,16 +17,16 @@
 
 <body>
     <div id="app">
-        <input type="text" v-model='inputValue'>
+        <input type="text" v-model='inputValue' @keyup.enter='submit' >
         <button @click='submit'>这是一个按钮</button>
         <ul>
-            <todo-item v-for='(item, index) of list' :key='index' :content='item'></todo-item>
+            <todo-item v-for='(item, index) of list' :key='index' :content='item' :index='index'></todo-item>
         </ul>
     </div>
     <script>
         Vue.component('todo-item', {
-            props: ['content'],
-            template: '<li @click="ni">{{content}}</li>',
+            props: ['content', 'index'],
+            template: '<li @click="ni">{{content}}{{index}}</li>',
             methods: {
                 ni: function () {
                     alert('我是谁?')
