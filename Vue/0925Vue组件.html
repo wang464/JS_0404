@@ -8,7 +8,7 @@
     <title>Vue组件的使用</title>
     <script src="./vue.js"></script>
     <style>
-    button {
+        button {
         border: 1px solid #c3c3c3;
     }
     </style>
@@ -20,23 +20,34 @@
         <input type="text" v-model='inputValue'>
         <button @click='submit'>这是一个按钮</button>
         <ul>
-            <todo-item></todo-item>
+            <todo-item v-for='(item, index) of list' :key='index' :content='item'></todo-item>
         </ul>
     </div>
     <script>
         Vue.component('todo-item', {
-            template: '<li>这是全局组件</li>'
+            props: ['content'],
+            template: '<li @click="ni">{{content}}</li>',
+            methods: {
+                ni: function () {
+                    alert('我是谁?')
+                }
+            }
         })
         new Vue({
             el: '#app',
             data: {
-                inputValue: "",
+                inputValue: "这是什么?",
                 list: []
             },
             methods: {
                 submit: function () {
-                    this.list.push(this.inputValue),
-                        this.inputValue = ''
+                    if (this.inputValue != "") {
+                        this.list.push(this.inputValue);
+                        this.inputValue = '';
+                    } else {
+                        this.inputValue = '';
+
+                    }
                 }
             }
         })
