@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>这是一个局部组件</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <todo-item></todo-item>
+
+    </div>
+    <script>
+        var todoitem = {
+            template: '<li>这是一个组件</li>'
+        }
+        // 调用局部组件的步骤. 新建一个变量储存组件. 
+        // 在vue里面使用components: 进行声明
+        new Vue({
+            el: '#app',
+            components: {
+                'todo-item': todoitem
+            },
+            data: {
+
+            }
+        })
+    </script>
+
+</body>
+
+</html>
