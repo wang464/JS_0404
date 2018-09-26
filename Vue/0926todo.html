@@ -53,7 +53,7 @@ index
     </div>
     <script>
         Vue.component('to-item', {
-            props: [eItem, eSubscript],
+            props: ['eItem', 'eSubscript'],
             template: '<li @click="link">{{eItem}}{{eSubscript}}</li>',
             methods: {
                 link: function () {
