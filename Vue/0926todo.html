@@ -46,18 +46,18 @@ index
         <input type="text" v-model='value' @keyup.enter='submit'>
         <button @click='submit'>提交按钮</button>
         <ul>
-            <to-item v-for='(item, subscript) of list '  :key="subscript" :eItem='item' :eSubscript='subscript'  @link='dele'>
+            <to-item v-for='(item, subscript) of list '  :key="subscript" :item='item' :subscript='subscript'  @link='dele'>
 
             </to-item>
         </ul>
     </div>
     <script>
         Vue.component('to-item', {
-            props: ['eItem', 'eSubscript'],
-            template: '<li @click="link">{{eItem}}{{eSubscript}}</li>',
+            props: ['item', 'subscript'],
+            template: '<li @click="link">{{item}}{{subscript}}</li>',
             methods: {
                 link: function () {
-                    this.$emit('link', this.eSubscript)
+                    this.$emit('link', this.subscript)
                 }
             }
         })
@@ -77,8 +77,8 @@ index
                         this.value = '';
                     }
                 },
-                dele: function (eSubscript) {
-                    this.list.splice(eSubscript, 1)
+                dele: function (subscript) {
+                    this.list.splice(subscript, 1)
                 }
 
             }
