@@ -22,7 +22,7 @@
         <ul>
             <todo-item v-for='(item, index) of list' :key='index' :content='item' :index='index' @nih='todoDelete'
             >
-        <!-- @nih 这是简写具体的写法是 v-on:nih 这句话的意思就是当nih这个参数出现的时候, 执行todoDelete. 之后todoDelete触发写在methods里面的方法. 于是splice删除方法被触发.-->
+        <!-- @nih 这是简写具体的写法是 v-on:nih 这句话的意思就是当nih这个参数出现的时候, 执行todoDelete. 之后todoDelete 触发写在methods里面的方法. 于是splice删除方法被触发.-->
         </todo-item>
         </ul>
     </div>

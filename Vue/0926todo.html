@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>不看实现一遍</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <!-- 要做的功能.
+        属性(事件)
+        输入框(触发v-model方法=value 触发@keyup.enter=submit方法)
+        提交按钮(触发submit方法)
+        列表框(触发v-for事件 :content=item记录(事件内容) :index是下标 )
+                v-for事件 (item, index) of list
+
+
+        事件:
+            value 需要进行双向数据绑定. 来获取值. v-model=value
+
+index
+
+        方法: 判断值是否是空 if(this.value !='')        
+            用一个list储存值. this.list.push(this.value)
+                    值在哪里? input v-model = value
+                        input 需要在添加之后清空 this.value=''
+            如果是空 else{
+                alert(这是空的不能添加进去.)
+            }
+
+        子组件__属性(事件)
+
+
+        方法
+        Vue.component('')组件
+        props:接受父组件的参数.[]
+        template: 模板<li @click=触发子组件nih方法.>{{}}
+        methods: nih: 方法的内容
+        给父组件发送数据. this.$emit('参数', 下标)
+        
+    -->
+    <div id="app">
+        <input type="text" v-model='value' @keyup.enter='submit'>
+        <button @click='submit'>提交按钮</button>
+        <ul>
+            <to-item v-for='(item, subscript) of list '  :key="subscript" :eItem='item' :eSubscript='subscript'  @link='dele'>
+
+            </to-item>
+        </ul>
+    </div>
+    <script>
+        Vue.component('to-item', {
+            props: [eItem, eSubscript],
+            template: '<li @click="link">{{eItem}}{{eSubscript}}</li>',
+            methods: {
+                link: function () {
+                    this.$emit('link', this.eSubscript)
+                }
+            }
+        })
+
+        new Vue({
+            el: '#app',
+            data: {
+                value: '写的内容',
+                list: []
+            },
+            methods: {
+                submit: function () {
+                    if (this.value != '') {
+                        this.list.push(this.value);
+                        this.value = '';
+                    } else {
+                        this.value = '';
+                    }
+                },
+                dele: function (eSubscript) {
+                    this.list.splice(eSubscript, 1)
+                }
+
+            }
+        })
+
+
+
+    </script>
+</body>
+
+</html>
