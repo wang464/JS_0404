@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>增删功能</title>
+    <script src="./vue.js"></script>
+    <style>
+        input,button, li {
+            width: 200px;
+            height: 50px;
+            margin:0px auto; 
+            display:table;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <!--
+        增删功能  不使用组件. 不通信
+        输入框       触发数据同步到data      
+        提交按钮     触发数据同步到data
+        列表显示     遍历数组里面的数据
+        要实现的功能.  有个输入框. 点击提交之后, 可以在列表里面遍历出来.
+        输入框, 发送数据到list里面. 列表把list里面的数据读出来. 
+            没有对数据进行绑定. 
+
+        增加删除功能. 删除需要知道下标.
+        删除功能的话, 怎么删除? 首先因为 li 是从for生成的. 所以需要删除的是list里面的元素. 怎么找到list的元素和下标呢? 
+        我经常犯的错误就是把 变量在 html 和 script 里面表现形式的不同而搞混, 在html 里面需要加引号, 而在script 里面不能加引号.
+
+     -->
+    <div id="app">
+        <input type="text" @keyup.enter='push_list' v-model='value'>
+        <button @click='push_list'>这是按钮</button>
+        <ul>
+            <li v-for='(item , subscribe) of list ' @click=det :subscribe='subscribe'>{{item}}</li>
+        </ul>
+
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                list: [],
+                value: '你好啊'
+            },
+            methods: {
+                push_list: function () {
+                    this.list.push(this.value),
+                        console.log(this.value)
+                    // console.log(this.item.id)
+                },
+                det: function (subscribe) {
+                    this.list.splice(subscribe, 1)
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>
