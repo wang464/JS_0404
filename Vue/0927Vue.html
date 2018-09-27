@@ -11,32 +11,32 @@
         input,button {
             width: 200px;
             height: 50px;
-            margin:0px auto; 
+            margin:0px auto;
             display:table;
             border: 1px solid #c3c3c3;
         }
         li {
             color: green;
-            margin:0px auto; 
+            margin:0px auto;
             display:table;
             font-size:30px;
-        } 
-    
+        }
+
     </style>
 </head>
 
 <body>
     <!--
         增删功能  不使用组件. 不通信
-        输入框       触发数据同步到data      
+        输入框       触发数据同步到data
         提交按钮     触发数据同步到data
         列表显示     遍历数组里面的数据
         要实现的功能.  有个输入框. 点击提交之后, 可以在列表里面遍历出来.
-        输入框, 发送数据到list里面. 列表把list里面的数据读出来. 
-            没有对数据进行绑定. 
+        输入框, 发送数据到list里面. 列表把list里面的数据读出来.
+            没有对数据进行绑定.
 
         增加删除功能. 删除需要知道下标.
-        删除功能的话, 怎么删除? 首先因为 li 是从for生成的. 所以需要删除的是list里面的元素. 怎么找到list的元素和下标呢? 
+        删除功能的话, 怎么删除? 首先因为 li 是从for生成的. 所以需要删除的是list里面的元素. 怎么找到list的元素和下标呢?
         我经常犯的错误就是把 变量在 html 和 script 里面表现形式的不同而搞混, 在html 里面需要加引号, 而在script 里面不能加引号.
 
      -->
