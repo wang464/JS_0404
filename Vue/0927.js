@@ -79,25 +79,43 @@ while (i <= 1000) {
   if (x == 1 && num == 1) {
     x = 2;
     // console.log( '第一个');
-  } else if (x == 2 && num == 1) {
+    mub++;
+
+  } else if (x == 2 && num == 2) {
     x = 3;
     // console.log( "第二个");
-  } else if (x == 3 && num == 2) {
+    mub++;
+
+  } else if (x == 3 && num == 1) {
     x = 4;
     // console.log( "第三个")
+    mub++;
+
   } else if (x == 4 && num == 2) {
     x = 1;
     // console.log( "第四个");
-    mub ++;
+    mub++;
+  } else if (x == 5 && num == 1) {
+    x = 1;
+    // console.log( "第四个");
+    mub++;
+  } else if (x == 6 && num == 2) {
+    x = 1;
+    // console.log( "第四个");
+    mub++;
+  } else if (x == 7 && num == 1) {
+    x = 1;
+    // console.log( "第四个");
+    mub++;
   } else {
     x = 1;
-    mub2 ++;
+    mub2++;
   }
   // console.log(num);//生成的随机数
   i++;
 }
-console.log("到4的次数"+mub);
-console.log("没有通过的次数"+mub2);
+console.log("通过的次数" + mub);
+console.log("没有通过的次数" + mub2);
 
 /*
 1222  =  3  56
