@@ -68,7 +68,7 @@ var x = 1;
 var i = 1;
 var mub = 0;
 var mub2 = 0;
-while (i <= 100) {
+while (i <= 1000) {
   function GetRandomNum(Min, Max) {
     var Range = Max - Min;
     var Rand = Math.random();
@@ -79,13 +79,13 @@ while (i <= 100) {
   if (x == 1 && num == 1) {
     x = 2;
     // console.log( '第一个');
-  } else if (x == 2 && num == 1) {
+  } else if (x == 2 && num == 2) {
     x = 3;
     // console.log( "第二个");
   } else if (x == 3 && num == 1) {
     x = 4;
     // console.log( "第三个")
-  } else if (x == 4 && num == 1) {
+  } else if (x == 4 && num == 2) {
     x = 1;
     // console.log( "第四个");
     mub ++;
