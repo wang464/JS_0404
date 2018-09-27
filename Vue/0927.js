@@ -81,7 +81,7 @@ while (i <= 1000) {
     // console.log( '第一个');
     mub++;
 
-  } else if (x == 2 && num == 2) {
+  } else if (x == 2 && num == 1) {
     x = 3;
     // console.log( "第二个");
     mub++;
@@ -91,7 +91,7 @@ while (i <= 1000) {
     // console.log( "第三个")
     mub++;
 
-  } else if (x == 4 && num == 2) {
+  } else if (x == 4 && num == 1) {
     x = 1;
     // console.log( "第四个");
     mub++;
@@ -99,7 +99,7 @@ while (i <= 1000) {
     x = 1;
     // console.log( "第四个");
     mub++;
-  } else if (x == 6 && num == 2) {
+  } else if (x == 6 && num == 1) {
     x = 1;
     // console.log( "第四个");
     mub++;
