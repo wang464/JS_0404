@@ -82,10 +82,10 @@ while (i <= 1000) {
   } else if (x == 2 && num == 2) {
     x = 3;
     // console.log( "第二个");
-  } else if (x == 3 && num == 1) {
+  } else if (x == 3 && num == 2) {
     x = 4;
     // console.log( "第三个")
-  } else if (x == 4 && num == 2) {
+  } else if (x == 4 && num == 1) {
     x = 1;
     // console.log( "第四个");
     mub ++;
