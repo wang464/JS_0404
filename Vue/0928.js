@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 /*
 10000从20开始翻倍. 可以走几步.
@@ -8,17 +8,19 @@
 z = 20
 z =  z *2
 
-
-
-
 */
+
 var yy = function (y) {
-
   for (var i = 1; i <= 9; i++) {
-
-    y.push(i);
+    y.push(i)
     // console.log(i);
-    console.log(y.length);
+    console.log(y.length)
   }
 }
+yy(3)
 
+var x = 5
+
+function foo () {
+  // code
+}

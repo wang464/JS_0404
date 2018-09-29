@@ -32,4 +32,11 @@
   },
   // 设置默认打开的浏览器为谷歌
   "open-in-browser.default": "chrome",
+  //使用eslint
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "html",
+    "vue"
+]
 }
