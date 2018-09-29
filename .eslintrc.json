@@ -2,11 +2,6 @@
     "extends": "standard",
     "rules": {
         "semi": "error",
-        "semi-style": ["error", "first"],
-        "console": "off",
-        "no-extra-semi": "error",
-        "eol-last": ["error", "never"],
-        "lines-around-comment": ["error", { "afterBlockComment": true }]
 
     }
 
