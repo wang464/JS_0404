@@ -4,6 +4,7 @@
   "description": "尝试写一个JS脚本",
   "main": "360防复制.js",
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "browser-sync": "^2.24.6",
     "cheerio": "^1.0.0-rc.2",
     "iconv-lite": "^0.4.21",

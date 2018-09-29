@@ -8,7 +8,7 @@
   "sync.autoDownload": false,
   "sync.autoUpload": false,
   "sync.forceDownload": false,
-  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+  // "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
   "workbench.iconTheme": "vscode-icons",
   "git.enableSmartCommit": true,
   "vsicons.dontShowNewVersionMessage": true,
