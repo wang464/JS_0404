@@ -18,9 +18,3 @@ var yy = function (y) {
   }
 }
 yy(3)
-
-var x = 5
-
-function foo () {
-  // code
-}
