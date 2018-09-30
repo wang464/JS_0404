@@ -3,6 +3,9 @@
     "rules": {
         "semi": "error"
 
-    }
+    },
+    "plugins": [
+      "html"
+    ]
 
 }
