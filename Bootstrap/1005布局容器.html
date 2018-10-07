@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>布局容器.</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <style>
+  div {
+    border: 1px solid #c3c3c3;
+  }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row">一行
+    <div class="col-lg">AAA</div>
+    <div class="col-lg">BBB</div>
+    <div class="col-lg">CCC</div>
+  </div>
+  <div class="row">另外一行
+    <div class="col-lg-offset-1 bg-info">站位一个</div>
+    <div class="col-lg-offset-12 bg-primary">站位一个</div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">不沾满
+      <div class="col-lg">AAA</div>
+      <div class="col-lg">BBB</div>
+      <div class="col-lg">CCC</div>
+  </div>
+  <div class="row">另外一行
+      <div class="col-lg-3 bg-info">站位一个</div>
+      <div class="col-lg-4 bg-primary">站位一个</div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row ">
+      <div class="col-11 bg-white">12 </div>
+      <div class="col-1 bg-secondary">col-6</div>
+    </div>
+</div>
+
+</body>
+</html>
