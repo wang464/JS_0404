@@ -21,3 +21,17 @@ function Dogs () {
 
 let myDogs = new Dogs();
 console.log(myDogs.name);
+
+// 这个构造函数里面增加了一个方法.
+function Person (params) {
+  this.params = params;
+  console.log(this.params);
+  this.sayHello = function () {
+    console.log('hello' + this.params);
+  }
+}
+
+var peso = new Person('你好啊');
+var pers = new Person('我不好');
+pers.sayHello();
+peso.sayHello();
