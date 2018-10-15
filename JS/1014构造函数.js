@@ -30,8 +30,15 @@ function Person (params) {
     console.log('hello' + this.params);
   }
 }
+Person.prototype = {
+  area: function () {
+    return console.log('我是后来添加的原型链');
+  }
+}
 
 var peso = new Person('你好啊');
-var pers = new Person('我不好');
-pers.sayHello();
+var pere = new Person('我不好');
+pere.sayHello();
 peso.sayHello();
+
+pere.area();
